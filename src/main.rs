@@ -1,5 +1,15 @@
+#[derive(Debug)]
+struct Person {
+    name: String,
+    age: i32
+}
+
 fn main() {
-    let nums: Vec<i32> = vec![1, 2, 3, 4, 5];
-    let filters: Vec<i32> = nums.into_iter().filter(|x| x % 2 ==0).collect();
-    println!("{:?}", filters);
+    let mut jane = Person {
+        name: String::from("Jane"),
+        age: 38
+    };
+    jane.age += 1;
+    println!("{} {}", jane.name, jane.age);
+    println!("{:?}", jane);
 }
